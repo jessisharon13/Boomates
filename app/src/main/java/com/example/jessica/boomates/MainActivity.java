@@ -6,9 +6,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,23 +28,20 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
 
-     /*   TextView textic = (TextView) findViewById(R.id.countdown_timer1);
-
+    public void startCountdown() {
+        final TextView timer1 = (TextView) findViewById(R.id.countdown_timer1);
         CountDownTimer Count = new CountDownTimer(30000, 1000) {
             public void onTick(long millisUntilFinished) {
-                textic.setText("Seconds remaining: " + millisUntilFinished / 1000);
+                timer1.setText("Seconds remaining: " + millisUntilFinished / 1000);
             }
 
             public void onFinish() {
-                textic.setText("Finished");
+                timer1.setText("Finished");
             }
         };
-
-        Count.start();*/
-
-
-
+        Count.start();
     }
 
     @Override
@@ -69,4 +66,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-        }
+}
