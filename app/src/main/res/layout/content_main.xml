@@ -30,13 +30,23 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="81dp"
+        android:id="@+id/Boom1"
+        android:layout_weight="0.39"
+        android:layout_below="@+id/tableRow"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="496dp"
+        android:layout_marginStart="496dp"
+        android:layout_marginTop="85dp"
+        app:srcCompat="@android:drawable/ic_delete" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -84,11 +94,11 @@
                                 android:textSize="28sp" />
 
                             <TextView
-                                android:text="Final Booms:"
+                                android:text="Booms:"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="49dp"
                                 android:id="@+id/textView15"
-                                android:layout_weight="1"
+                                android:layout_weight="0.57"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textSize="28sp" />
                         </LinearLayout>
@@ -106,30 +116,30 @@
 
                             <ImageView
                                 android:layout_width="wrap_content"
-                                android:layout_height="81dp"
-                                app:srcCompat="@android:drawable/ic_delete"
-                                android:id="@+id/imageView5"
+                                android:layout_height="80dp"
+                                app:srcCompat="@android:drawable/btn_dialog"
+                                android:id="@+id/boom1"
                                 android:layout_weight="0.39" />
 
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 app:srcCompat="@android:drawable/btn_dialog"
-                                android:id="@+id/imageView"
+                                android:id="@+id/boom2"
                                 android:layout_weight="0.39" />
 
                             <ImageView
                                 android:layout_width="84dp"
                                 android:layout_height="match_parent"
                                 app:srcCompat="@android:drawable/btn_dialog"
-                                android:id="@+id/imageView8"
+                                android:id="@+id/boom3"
                                 android:layout_weight="0.11" />
 
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 app:srcCompat="@android:drawable/btn_dialog"
-                                android:id="@+id/imageView7"
+                                android:id="@+id/boom4"
                                 android:layout_weight="0.35" />
 
                         </LinearLayout>
@@ -150,7 +160,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/countdown_timer1"
-                                android:layout_weight="1" />
+                                android:layout_weight="1"
+                                android:textSize="28sp" />
 
                             <TextView
                                 android:text="24:00"
@@ -158,8 +169,8 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/textView4"
                                 android:layout_weight="1"
-                                android:textSize="28sp"
-                                android:textColor="@android:color/darker_gray" />
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textSize="28sp" />
                         </LinearLayout>
                     </TableRow>
                 </TableLayout>
@@ -196,8 +207,9 @@
                     android:layout_weight="0.82"
                     android:background="@android:color/holo_red_dark"
                     android:elevation="24dp"
-                    style="@style/Widget.AppCompat.Button"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_margin="20px" />
             </LinearLayout>
         </TableRow>
 
@@ -226,9 +238,11 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button2"
                     android:layout_weight="1.10"
-                    android:background="@android:color/holo_red_light"
+                    android:background="@android:color/holo_red_dark"
                     android:elevation="24dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_margin="20px" />
 
             </LinearLayout>
         </TableRow>

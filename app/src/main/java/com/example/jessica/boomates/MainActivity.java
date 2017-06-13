@@ -9,9 +9,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    boolean boom1 = true;
+    boolean boom2 = true;
+    boolean boom3 = false;
+    boolean boom4 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        
 
      /*   TextView textic = (TextView) findViewById(R.id.countdown_timer1);
 
@@ -43,8 +40,28 @@ public class MainActivity extends AppCompatActivity {
 
         Count.start();*/
 
+       updateBooms();
 
 
+    }
+
+    public void updateBooms(){
+        ImageView img1= (ImageView) findViewById(R.id.boom1);
+        if(boom1) {
+            img1.setImageResource(android.R.drawable.ic_delete);
+        }
+        ImageView img2= (ImageView) findViewById(R.id.boom2);
+        if(boom2) {
+            img2.setImageResource(android.R.drawable.ic_delete);
+        }
+        ImageView img3= (ImageView) findViewById(R.id.boom3);
+        if(boom3) {
+            img3.setImageResource(android.R.drawable.ic_delete);
+        }
+        ImageView img4= (ImageView) findViewById(R.id.boom4);
+        if(boom4) {
+            img4.setImageResource(android.R.drawable.ic_delete);
+        }
     }
 
     @Override
@@ -69,4 +86,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-        }
+
+
+}
