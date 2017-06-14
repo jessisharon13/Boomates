@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.view.View;
 import android.widget.TextView;
@@ -25,17 +26,32 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         updateBooms();
+
+        TextView btn = (TextView) findViewById(R.id.countdown_timer2);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startCountdown(v);
+            }
+        });
+
+
+
     }
 
-    public void startCountdown() {
-        final TextView timer1 = (TextView) findViewById(R.id.countdown_timer1);
-        CountDownTimer Count = new CountDownTimer(30000, 1000) {
+    public void startCountdown(View v) {
+        final TextView timer2 = (TextView) findViewById(R.id.countdown_timer2);
+        CountDownTimer Count = new CountDownTimer(86400000, 1000) {
             public void onTick(long millisUntilFinished) {
-                timer1.setText("Seconds remaining: " + millisUntilFinished / 1000);
+                int seconds = (int) (millisUntilFinished / 1000) % 60 ;
+                int minutes = (int) ((millisUntilFinished / (1000*60)) % 60);
+                int hours   = (int) ((millisUntilFinished / (1000*60*60)) % 24);
+                timer2.setText(hours + ":" + minutes + ":" + seconds);
             }
 
             public void onFinish() {
-                timer1.setText("Finished");
+                timer2.setText("Finished");
             }
         };
 

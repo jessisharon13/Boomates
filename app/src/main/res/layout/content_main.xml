@@ -156,19 +156,21 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:text="12:48"
+                                android:id="@+id/countdown_timer1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/countdown_timer1"
                                 android:layout_weight="1"
+                                android:onClick="startCountdown"
+                                android:text="12:48:53"
                                 android:textSize="28sp" />
 
                             <TextView
-                                android:text="24:00"
+                                android:id="@+id/countdown_timer2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView4"
                                 android:layout_weight="1"
+                                android:onClick="startCountdown"
+                                android:text="24:00"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:textSize="28sp" />
                         </LinearLayout>
